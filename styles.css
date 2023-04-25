@@ -14,10 +14,11 @@ body {
     background-color: #F2F2F2;
     margin: 0 auto;
     max-width:414px;
-    font-family: 'Bebas Neue', cursive;
+    font-family: 'Bebas Neue';
     font-family: 'Montserrat', sans-serif;
 }
 
+/*Regular font: Bebas Neue*/
 h1 {
     font-size: 40px;
 }
@@ -27,4 +28,106 @@ h2 {
 }
 h3 {
     font-size: 25px;
+}
+
+nav h2 {
+    visibility:hidden;
+    height:1px;
+}
+
+nav a {
+   font-size: 20px;  
+   border-radius: 2px;
+   padding: 5px;
+   display: inline-flex;
+   text-decoration: none;
+   text-align: center;
+} 
+
+nav a:hover {
+background-color: #007d7b;
+color:#ffffff;
+}
+
+nav span {
+    font-size: 20px;    
+}
+
+menu li {
+    font-size: 20px;
+}
+
+#social li{
+    font-size: 20px;
+}
+
+footer {
+    font-size: 20px;
+}
+
+
+/*Montserrat Regular*/
+
+p {
+ font-size: 16 px;
+}
+
+dd {
+    font-size: 16px; 
+}
+
+li {
+    font-size: 16px;
+}
+
+nav {
+    font-size: 16px;
+}
+
+input {
+    font-size: 16px;
+}
+
+
+/*Montserrat Bold*/
+
+dt {
+    font-size: 16px;
+}
+
+
+.none {
+    list-style: none; 
+}
+
+#Hamburger{
+    transform: translate(-100px, 10px);
+}
+
+menu{
+    display: grid;
+    text-align: inline;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+menu li {
+    text-align: center;
+}
+
+.Resizedicon {
+    max-width: 30%;
+}
+
+/*Image adjustments*/
+#tacos {
+    height: auto;
+    max-width: 100%;
+}
+
+.adjusted {
+    max-width: 10%;
+}
+
+.Sides {
+    max-width: 25%;
 }

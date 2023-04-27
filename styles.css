@@ -10,38 +10,52 @@ html {
     background-color: rgba(122, 191, 191, .5);
 }
 
-body {
+header{
     background-color: #F2F2F2;
+}
+
+
+body {
     margin: 0 auto;
     max-width:414px;
     font-family: 'Bebas Neue';
     font-family: 'Montserrat', sans-serif;
 }
 
+main {
+    background-color: #F2F2F2;
+}
+
 /*Regular font: Bebas Neue*/
 h1 {
     font-size: 40px;
+    font-family: 'Bebas Neue';
+    text-align: center;
 }
 
 h2 {
     font-size: 30px;
+    font-family: 'Bebas Neue';
+    text-align: center;
 }
 h3 {
     font-size: 25px;
+    font-family: 'Bebas Neue';
 }
 
 nav h2 {
+    font-family: 'Bebas Neue';
     visibility:hidden;
     height:1px;
 }
 
-nav a {
-   font-size: 20px;  
-   border-radius: 2px;
-   padding: 5px;
-   display: inline-flex;
-   text-decoration: none;
-   text-align: center;
+nav a { 
+    font-family: 'Bebas Neue';
+    font-size: 20px;  
+    border-radius: 2px;
+    padding: 5px;
+    text-decoration: none;
+    text-align: center;
 } 
 
 nav a:hover {
@@ -50,72 +64,134 @@ color:#ffffff;
 }
 
 nav span {
+    font-family: 'Bebas Neue';
     font-size: 20px;    
 }
 
-menu li {
+menu{
+    color: #EB5428;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+menu svg {
+    max-width: 40%;
+    margin-bottom: 5px;
+}
+
+#Menu li {
     font-size: 20px;
+    font-family: 'Bebas Neue';
+    list-style: none;
+    display: inherit;
+    margin-left: 30px;
+}
+
+
+
+.navigation li {
+    list-style: none;
+}
+
+.dishItems{
+    margin: 10px 10px 10px 10px;
+}
+
+#sideDish {
+    background-color: #7ABFBF;
+    margin-top: 20px;
 }
 
 #social li{
+    font-family: 'Bebas Neue';
     font-size: 20px;
+    list-style: none;
+}
+
+#mediaLinks {
+    color: #EB5428;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#footerImg {
+    max-width: 35%;
+}
+
+footer small {
+    display: inherit;
 }
 
 footer {
+    font-family: 'Bebas Neue';
     font-size: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 
 /*Montserrat Regular*/
 
 p {
- font-size: 16 px;
+ font-size: 16px;
+ font-family: 'Montserrat', sans-serif;
+ padding: 8px;
 }
 
 dd {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px; 
 }
 
+
 li {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 30px;
 }
 
 nav {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
 input {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
 }
 
 
-/*Montserrat Bold*/
-
-dt {
+/*Direction dt*/
+#Details dt {
+    font-family: 'Montserrat', sans-serif;
     font-size: 16px;
+    font-weight: 700;
 }
 
 
-.none {
+.detail {
     list-style: none; 
 }
 
-#Hamburger{
-    transform: translate(-100px, 10px);
+.detail dt {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-menu{
+/*#Hamburger{}*/
+
+
+#social {
+    color: #EB5428;
+    list-style: none;
     display: grid;
-    text-align: inline;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-
-menu li {
-    text-align: center;
-}
-
-.Resizedicon {
-    max-width: 30%;
 }
 
 /*Image adjustments*/
@@ -128,6 +204,12 @@ menu li {
     max-width: 10%;
 }
 
-.Sides {
+.Imgside {
     max-width: 25%;
+}
+
+.ddBold dd{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
 }

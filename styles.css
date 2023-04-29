@@ -1,6 +1,49 @@
 @import 
 url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;700&display=swap');
 
+
+/*CSS reset start*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*CSS reset end*/
 * {
     box-sizing:border-box;
     margin:0;
@@ -12,6 +55,9 @@ html {
 
 header{
     background-color: #F2F2F2;
+    transform: translateY(125px);
+    padding-top: 10px;
+    padding-bottom: 18px;
 }
 
 
@@ -24,6 +70,7 @@ body {
 
 main {
     background-color: #F2F2F2;
+    transform: translateY(125px);
 }
 
 /*Regular font: Bebas Neue*/
@@ -41,6 +88,116 @@ h2 {
 h3 {
     font-size: 25px;
     font-family: 'Bebas Neue';
+    transform: translate(110px, -102px);
+}
+
+#filledOrg{
+    background-color: #EB5428;
+    padding: 5px 5px 5px 5px;
+    transform: translate(10px, -43px);
+    width: 260px;
+    height: 62px;
+}
+#hamburger{
+    transform: translate(20px, 10px);
+}
+
+#Profileicon {
+    stroke: #EB5428;
+    transform: translate(24px, -50px);
+}
+
+#profileText {
+    transform: translate(325px, -568px);
+}
+
+/*Menu Animation*/
+
+[href="#home"] {
+    text-transform: capitalize;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 16px 16px;
+}
+a:hover, input:hover {
+    background-color: #590242;
+}
+label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    transform: translate(12px, -35px);
+    user-select: none;
+}
+label span {
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+    display: none;
+}
+input:checked ~ ul {
+    max-height: 775px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+
+nav {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    transform: translateY(-1970px);
+    width: 414px;
+    height: 62px;
+    background-color: #ffffff;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #F2F2F2;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+}
+nav a {
+    font-family: 'Bebas Neue';
+    font-size: 20px;  
+    color: #EB5428;
+    border-radius: 2px;
+    padding: 5px;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
 }
 
 nav h2 {
@@ -48,15 +205,6 @@ nav h2 {
     visibility:hidden;
     height:1px;
 }
-
-nav a { 
-    font-family: 'Bebas Neue';
-    font-size: 20px;  
-    border-radius: 2px;
-    padding: 5px;
-    text-decoration: none;
-    text-align: center;
-} 
 
 nav a:hover {
 background-color: #007d7b;
@@ -67,6 +215,12 @@ nav span {
     font-family: 'Bebas Neue';
     font-size: 20px;    
 }
+
+.navigation li {
+    list-style: none;
+}
+
+
 
 menu{
     color: #EB5428;
@@ -88,19 +242,29 @@ menu svg {
     margin-left: 30px;
 }
 
-
-
-.navigation li {
-    list-style: none;
+aside {
+    background-color: #7ABFBF;
+    margin-bottom: -695px;
 }
 
 .dishItems{
     margin: 10px 10px 10px 10px;
+    height: 130px;
 }
 
 #sideDish {
     background-color: #7ABFBF;
     margin-top: 20px;
+}
+
+.Filled {
+    fill:#EB5428; 
+}
+
+form {
+    transform: translateY(-1970px);
+    background-color: #F2F2F2;
+    height: 65px;
 }
 
 #social li{
@@ -116,6 +280,7 @@ menu svg {
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+
 #footerImg {
     max-width: 35%;
 }
@@ -130,9 +295,8 @@ footer {
     background-color: white;
     margin-bottom: 20px;
     text-align: center;
+    transform: translateY(683px);
 }
-
-
 /*Montserrat Regular*/
 
 p {
@@ -150,14 +314,7 @@ dd {
 li {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 15px;
     margin-left: 30px;
-}
-
-nav {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
 }
 
 input {
@@ -165,51 +322,244 @@ input {
     font-size: 16px;
 }
 
-
+.Listing-Heads {
+    margin-bottom: 25px
+}
 /*Direction dt*/
-#Details dt {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-
-.detail {
-    list-style: none; 
-}
-
 .detail dt {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 700;
+    margin-left: 10px;
 }
 
-/*#Hamburger{}*/
+.detail dd {
+    transform: translate(120px, -15px);
+}
 
+.detail {
+    margin-top: 10px;
+    list-style: none; 
+}
+/*Ingredients List*/
 
+#Ingredients {
+    margin: 5px 5px 5px 5px;
+}
+#Ingredients li {
+    margin-bottom: 10px;
+    list-style: square;
+}
+/*Directions list*/
+#Directions li{
+    margin-bottom: 30px;
+    text-align: inherit;
+}
 #social {
     color: #EB5428;
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 /*Image adjustments*/
 #tacos {
     height: auto;
     max-width: 100%;
 }
-
 .adjusted {
     max-width: 10%;
 }
-
 .Imgside {
     max-width: 25%;
 }
-
 .ddBold dd{
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     font-weight: 700;
+}
+#sideDish dl {
+    transform: translate(110px, -102px);
+}
+.stars {
+    transform: translate(110px, -102px);
+}
+
+@media screen and (min-width:768px) {
+    body {
+        min-width:768px;
+        background-color: #F2F2F2;
+      }
+
+    main {
+        transform: translateY(158px);
+    }
+
+    header {
+        transform: translate( -289px, 183px); 
+        background-color: transparent
+    }
+
+    h3 {
+        transform: translate(133px, -102px);
+    }
+
+      label span, input {
+        display:none;
+      }
+      #filledOrg{
+        background-color: #EB5428;
+        padding: 5px 5px 5px 5px;
+        transform: translate(-44px, -43px);
+        width: 75px;
+        height: 62px;
+    }
+
+    menu {
+        transform: translateY(64px);
+        background-color: rgb(255 255 255 / 59%);
+    }
+
+    #Profileicon {
+        transform: translate(585px, -50px);
+    }
+    [href="#home"] {
+        visibility: hidden;
+        transform: translate(-26px, 4px);
+    }
+      nav {
+        transform: translateY(-2339px);
+        width: 767px;
+        height: 96px;
+        background-color: #ffffff
+      }
+      .navigation {
+        width:768px;
+        overflow:visible;
+        height:auto;
+        position:absolute;
+        top:0;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      }
+    
+      nav a {
+        text-decoration: none;
+        transform: translate(-122px, 81px);
+        }
+      .adjusted {
+        transform: translate(-101px, 103px);
+        max-width: 50%;
+      }
+
+    #dishItems {
+        height: 192px;
+    }
+
+      .Imgside {
+        max-width: 15%;
+    }
+
+    .stars {
+        transform: translate(133px, -100px);
+    }
+
+      form {
+        transform: translate(595px, -2391px);
+        background-color: #ffffff;
+        width: 0px;
+    }
+
+    #social {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 5px;
+        transform: translateX(405px);
+    }
+
+    #footerImg {
+        max-width: 25%;
+        transform: translate(-259px, -70px);
+    }
+
+    footer small {
+        display: flex;
+        margin-left: 20px;
+        transform: translateY(-48px);
+    }
+}
+
+@media screen and (min-width:1280px) {
+    body {
+        min-width:1280px;
+        background-color: #F2F2F2;
+      }
+    header {
+        transform: translateY(179px);
+        text-align: center;
+    }
+    menu {
+        transform: translateY(260px);
+        background-color: #ffffff;
+        display: block;
+    }
+    #tacos {
+        height: auto;
+        max-width: 45%;
+        transform: translate(185px, -130px);
+    }
+    p {
+        display: inline-block;
+        padding: 8px;
+        transform: translate(794px, -875px);
+    }
+
+    #Detail {
+        background-color: black;
+        color: #007d7b;
+    }
+    #Detail dl{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .listings {
+        display: grid;
+        grid-row: 1/3;
+    }
+      #filledOrg {
+        transform: translate(-44px, -43px);
+        width: 111px;
+        height: 102px;
+    }
+    #Profileicon {
+        transform: translate(1000px, -75px);
+    }
+    nav {
+        transform: translateY(-2052px);
+        width: 1279px;
+        height: 102px;
+    }
+    .navigation {
+        width: 768px;
+        transform: translate(175px, -82px);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    #sideDish {
+        display: grid;
+        grid-column: 1/4;
+    }
+    form {
+        transform: translate(874px, -1960px);
+    }
+    #social {
+        transform: translateX(918px);
+    }
+    #footerImg {
+        transform: translate(-450px, -58px);
+    }
+    footer small {
+        transform: translate(65px,-45px);
+    }
 }
